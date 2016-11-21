@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <title>App Oan Hồn</title>
+    <meta name="keyword" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta property="fb:app_id" content="" />
+    <meta property="og:title"content="" />
+    <meta property="og:type" content="game" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:description" content="" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" /> 
+    <link rel="stylesheet" href="css/loadie.css">
+    <link rel="stylesheet" href="css/styles.css">    
+    <link rel="stylesheet" href="css/themes/odometer-theme-train-station.css">    
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+    <script type="application/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="application/javascript" src="js/bootstrap.min.js"></script>    
+    <script type="application/javascript" src="js/modernizr.js"></script>
+    <script type="application/javascript" src="js/jquery.loadie.js"></script>    
+    <script type="application/javascript" src="js/odometer.min.js"></script>   
+    <script type="application/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script type="application/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
+
+
+    
+</head>
+<body>
+    <!-- APP PRELOADER -->
+		<div id="fb-preloader">
+			<div class="preload-up"></div>
+			<div class="preload-progress"></div>
+			<div class="preload-down"></div>
+		</div>
+    <!-- END OF APP PRELOADER -->
+    
+    <div id="main">
+        <div id="fix">
+            <a href="javascript:void(0)" class="info" data-toggle="modal" data-target="#modalInfo"></a>
+            <a href="" class="sound"></a>
+        </div>
+        
+        <div class="content text-center">
+            <div class="logo">
+                <img src="images/check.png" />
+            </div>
+            <h2 class="white big-title">Cám ơn các bạn đã tham gia vào game! </h2>            
+            <p class="title big-title">
+                <span class="sub-title white">Kết quả trò chơi sẽ được công bố ngày</span>
+                <br />
+                20/05/2015 
+            </p>
+        </div>
+    </div>
+    
+    
+    <!-- Modal Info -->
+    <div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabelInfo" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabelInfo">Chính sách và điều kiện</h4>
+          </div>
+          <div class="modal-body mCustomScrollbar">
+            <p><span class="red">Nội dung trò chơi:</span><br/>
+            Thu nhập càng nhiều mã số may mắn, bạn càng có cơ hội trúng thưởng cao.
+            </p>
+            <p><span class="red">Thời gian:</span><br/>
+            Trò chơi bắt đầu từ 03/17/2015 03:00 AM đến 03/18/2015 03:00 PM.
+            </p>
+            <p><span class="red">Đơn vị tổ chức</span><br/>
+            Đơn vị tổ chức trò chơi Con Số May Mắn Trúng Trưởng (gọi tắt là: Game) là DGM Vietnam (gọi tắt là:DGM).
+            </p>
+            <p><span class="red">Chính sách và điều khoản khi tham gia</span><br/>
+            Đối tượng tham gia trò chơi là
+            <br />
+            người có coupon code,<br />
+            có tài khoản ở Facebook,<br />
+            cung cấp thông tin cơ bản của tài khoản.<br />
+            Bằng cách tham gia Game, người chơi đã chấp nhận <br />
+            </p>
+            <p><span class="red">Nội dung trò chơi:</span><br/>
+            Thu nhập càng nhiều mã số may mắn, bạn càng có cơ hội trúng thưởng cao.
+            </p>
+            <p><span class="red">Thời gian:</span><br/>
+            Trò chơi bắt đầu từ 03/17/2015 03:00 AM đến 03/18/2015 03:00 PM.
+            </p>
+            <p><span class="red">Đơn vị tổ chức</span><br/>
+            Đơn vị tổ chức trò chơi Con Số May Mắn Trúng Trưởng (gọi tắt là: Game) là DGM Vietnam (gọi tắt là:DGM).
+            </p>
+            <p><span class="red">Chính sách và điều khoản khi tham gia</span><br/>
+            Đối tượng tham gia trò chơi là
+            <br />
+            người có coupon code,<br />
+            có tài khoản ở Facebook,<br />
+            cung cấp thông tin cơ bản của tài khoản.<br />
+            Bằng cách tham gia Game, người chơi đã chấp nhận <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Info-->
+    
+    
+    <script>
+        
+    //Number counter
+    function randomIntFromInterval(min,max)
+    {
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+        
+    var el = document.querySelector('.number');
+    
+    od = new Odometer({
+      el: el,
+      value: 10000,
+
+      // Any option (other than auto and selector) can be passed in here
+      format: '',
+      theme: 'train-station'
+    });
+        
+    $(document).ready(function(){
+        $(document).on('click', '#btnquay', function(){            
+            od.update(randomIntFromInterval(10000,99999));
+        });
+    });
+    
+        
+        
+    //Custom scollbar
+    (function($){
+        $(window).load(function(){
+            if($('.mCustomScrollbar').length > 0) {                
+                $(".mCustomScrollbar").mCustomScrollbar();
+            }
+        });
+    })(jQuery);
+        
+        
+    //Preloader
+	$(function() {
+		$('body').loadie();
+	})
+	</script>
+</body>

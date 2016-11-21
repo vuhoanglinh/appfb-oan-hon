@@ -1,0 +1,200 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(50,50,50,0.25);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50,50,50,0.5);
+  }
+  ::-webkit-scrollbar-track {
+    background-color: rgba(50,50,50,0.05);
+  }
+body {
+    font-family: Roboto Slab, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+#main {
+    width: 810px;
+    height: 500px;
+    margin: auto;
+    padding: 0;
+    background-image: url(../images/bg.png);
+    position: relative;
+}
+#fix a {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 10px 0 0 10px;
+    opacity: .5;
+    -webkit-transition: width 0.7s; /* Safari */
+    transition: width 0.7s;
+}
+#fix a:hover, #fix a:active, #fix a.active {
+    width: 80px;
+    opacity: 1;
+}
+#fix a.info
+{
+    top: 185px;
+    background: #06090f url(../images/info.png);
+    background-repeat: no-repeat;
+    background-position: 10px; 
+}
+#fix a.sound
+{
+    top: 245px;
+    background: #06090f url(../images/music.png);
+    background-repeat: no-repeat;
+    background-position: 10px; 
+}
+.content {
+    padding-top: 65px;
+}
+
+.title {
+    color: #13a9d5;
+    font-size: 18pt;
+}
+.big-title {
+    font-size: 24pt;
+    line-height: 1;
+}
+.sub-title {
+    font-size: 14pt;
+    font-weight: 100;
+}
+.white {
+    color: #fff;
+}
+
+.button {
+    background: url(../images/btn.png);
+    width: 225px;
+    height: 52px;
+    font-size: 18pt;
+    color: #fff;
+    vertical-align: middle;
+    border: none;
+    outline: 0;
+}
+.counter {
+    padding: 20px;
+}
+.number, .number2 {
+    font-size: 18pt;
+}
+.number2 .odometer-digit {
+    border: 1px solid #000;
+}
+.red {
+    color: #ec3434;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 400px;
+    }
+
+}
+/*--- Modal -----*/
+.modal-content {
+    border-radius: 20px;
+}
+.modal-header {
+    background: -webkit-linear-gradient(#22daee, #10afda); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#22daee, #10afda); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#22daee, #10afda); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#22daee, #10afda); /* Standard syntax */
+    font-size: 20pt;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px 10px 10px;
+    border-radius: 20px 20px 0 0;
+}
+.modal-header.basic {
+    background: #f7f7f7 url(../images/line.png); 
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #000;
+}
+.modal-body { 
+    max-height: 390px;
+    overflow-y: auto;
+    padding-right: 5px;
+    
+}
+
+
+/******Box********/
+.box {
+    border-radius: 20px;
+    background: #f6f6f6;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.box .boxrow {
+    padding: 10px 20px;
+    border-bottom: 1px solid #dfdfdf;
+    min-height: 40px;
+}
+.box .boxrow:last-child{
+    border-bottom-color: transparent;
+}
+.box p { 
+    margin-bottom: 0;
+}
+
+.box .form-control, .bootstrap-tagsinput {
+    margin: 10px auto;
+    width: 70%;
+    box-shadow: none;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+    color: #e0e0e0;
+    height: 36px;
+    background: #fff;
+    font-weight: normal;
+    margin: auto;
+}
+.box .form-control:focus {
+    box-shadow: none;
+}
+.box.box-blue {
+    border-radius: 5px;
+    border: 2px solid #12a5d3;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+}
+.box.box-blue p { 
+    font-size: 18pt;
+}
+/******Num******/
+.num {
+    padding: 3px 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+.num-blue {
+    background: #12a4d3;
+}
+.num-yellow {
+    background: #ffea00;
+}
+.num-red {
+    background: #ec3434;
+}
